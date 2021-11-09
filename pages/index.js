@@ -5,7 +5,7 @@ import { getFood } from '../lib/data';
 
 
 export async function getStaticProps() {
-  const allData = getFood();
+  const allData = await getFood();
   return {
     props: {
       allData
@@ -16,21 +16,14 @@ export async function getStaticProps() {
 export default function Home({ allData }) {
   return (
     <Layout home>
-      <h2 className="text-center">Menu Items</h2>
-        <div className="container text-center">
-          <div className="row">
-            {allData.map(({ id, food, img }) => (
-              <div key={id} className="col-4 mt-20">
-                <Link href={`/${id}`}>
-                  <a>
-                    <img src={img}/><br/>
-                      {food}
-                  </a>
-                </Link>
-              </div>
-            ))}
+      <h1>List of Names</h1>
+        <div className="list-group">
+          {allData.map(({ id, name }) => (
+            <Link key={id} href={`/${id}`}>
+              <a className="list-group-item list-group-item-action">{name}</a>
+            </Link>
+          ))}
         </div>
-      </div>
     </Layout>
   );
 }
