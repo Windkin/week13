@@ -9,7 +9,7 @@ export default function Layout( { children, home } ) {
       </Head>
       <header>
         <nav className="text-center">
-          <h1>Menu Of Random Things I Have Made</h1>
+          <h1>Week 12 Assignment</h1>
           {!home && (
           <h2>Enjoy</h2>
           )
