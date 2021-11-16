@@ -17,7 +17,7 @@ export default function Layout( { children, home } ) {
       {!home && (
         <div className="text-center">
           <Link href="/">
-            <a className="text-center" className="btn btn-primary mt-3">← Back to home</a>
+            <a className="btn btn-primary mt-3">← Back to home</a>
           </Link><br/>
         </div>
         )
