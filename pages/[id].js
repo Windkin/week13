@@ -12,7 +12,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllIds();
+  const paths = await getAllIds();
   return {
     paths,
     fallback: false
@@ -23,12 +23,13 @@ export default function Entry({ itemData }){
   return (
     <Layout>
       <div className="container">
-        <h3 className="text-center">{itemData.name}</h3>
+      <br/>
+        <h3 className="text-center"><u>{itemData.post_title}</u></h3>
           <div className="row">
-            <img className="col-sm" src={itemData.img}/>
-            <div className="col">{itemData.description}</div>
+        
+            <div className="col">{itemData.post_content}</div>
           </div>
-        <p>Made {itemData.date}</p>
+        <p>{itemData.date}</p>
       </div>
     </Layout>
   );

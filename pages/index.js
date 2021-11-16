@@ -16,10 +16,10 @@ export async function getStaticProps() {
 export default function Home({ allData }) {
   return (
     <Layout home>
-      <h1 className="text-center">List of Names</h1>
+      <h1 className="text-center">Headless CMS-Powered App</h1>
         <div className="list-group">
-          {allData.map(({ id, name, addy }) => (
-            <Link key={id} href={`https://dev-cs5513.pantheonsite.io/2021/11/11/${addy}`}>
+          {allData.map(({ id, name }) => (
+            <Link key={id} href={`/${id}`}>
               <a className="list-group-item list-group-item-action">{name}</a>
             </Link>
           ))}

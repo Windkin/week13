@@ -10,21 +10,20 @@ export default function Layout( { children, home } ) {
       <header>
         <nav className="text-center">
           <h1>Week 12 Assignment</h1>
-          {!home && (
-          <h2>Enjoy</h2>
-          )
-          }
+          
         </nav>
       </header>
       <main>{children}</main>
       {!home && (
+        <div className="text-center">
           <Link href="/">
-            <a className="btn btn-primary mt-3">← Back to home</a>
-          </Link>
+            <a className="text-center" className="btn btn-primary mt-3">← Back to home</a>
+          </Link><br/>
+        </div>
         )
       }
-      <footer className="text-center">
-        <h6>Week 4 cs55.13 W. Richman</h6>
+      <footer className="text-center p-4">
+        <h6>Week 12 cs55.13 W. Richman</h6>
       </footer>
     </div>
   );
