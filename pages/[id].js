@@ -18,7 +18,7 @@ export async function getStaticPaths() {
     fallback: false
   };
 }
-
+// dangerouslySetInnerHTML used to use the html markup
 export default function Entry({ itemData }){
   return (
     <Layout>
@@ -26,7 +26,7 @@ export default function Entry({ itemData }){
       <br/>
         <h3 className="text-center"><u>{itemData.post_title}</u></h3>
           <div className="row">
-        
+            
             <div className="col" dangerouslySetInnerHTML={{__html: itemData.post_content}}/>
           </div>
         <p>{itemData.date}</p>
