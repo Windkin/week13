@@ -27,7 +27,7 @@ export default function Entry({ itemData }){
         <h3 className="text-center"><u>{itemData.post_title}</u></h3>
           <div className="row">
         
-            <div className="col">{itemData.post_content}</div>
+            <div className="col" dangerouslySetInnerHTML={{__html: itemData.post_content}}/>
           </div>
         <p>{itemData.date}</p>
       </div>
