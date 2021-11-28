@@ -18,7 +18,7 @@ export async function getStaticPaths() {
     fallback: false
   };
 }
-// dangerouslySetInnerHTML used to use the html markup
+
 export default function Entry({ itemData }){
   return (
     <Layout>
