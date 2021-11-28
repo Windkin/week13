@@ -29,7 +29,7 @@ export default function Entry({ itemData }){
             
             <div className="col" dangerouslySetInnerHTML={{__html: itemData.post_content}}/>
           </div>
-        <p>{itemData.date}</p>
+        <p>posted on: {itemData.post_date}</p>
       </div>
     </Layout>
   );

@@ -9,7 +9,7 @@ export default function Layout( { children, home } ) {
       </Head>
       <header>
         <nav className="text-center">
-          <h1>Week 12 Assignment</h1>
+          <h1>Week 13 Assignment</h1>
           
         </nav>
       </header>
@@ -23,7 +23,7 @@ export default function Layout( { children, home } ) {
         )
       }
       <footer className="text-center p-4">
-        <h6>Week 12 cs55.13 W. Richman</h6>
+        <h6>Week 13 cs55.13 W. Richman</h6>
       </footer>
     </div>
   );
