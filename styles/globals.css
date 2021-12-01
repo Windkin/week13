@@ -14,3 +14,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+nav {
+  background: grey;
+}
+main {
+  background: lightgray;
+}
+
+body {
+  background: lightgoldenrodyellow;
+}
